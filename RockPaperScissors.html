@@ -72,43 +72,43 @@ document.onkeyup = function(event) {
 	   if (userGuess === computerGuess) {
 	   		tieScore++;
 	   		tieFunction(tieScore);
-	       return "The result is a tie!";
+	       
 
 	   }
 	   else if (userGuess === "r") {
 	       if (computerGuess === "s") {
 	       		winScore++;
 	       		winFunction(winScore);
-	           return "rock wins";
+	           
 	       }
 	       else {
 	       		loseScore++;
 	       		loseFunction(loseScore);
-	           return "paper wins";
+	           
 	       }
 	   }     
 	   else if (userGuess === "p") {
 	       if (computerGuess === "r") {
 	       	winScore++;
 	       	winFunction(winScore);
-	       return "paper wins";
+	      
 	       }
 	       else {
 	       		loseScore++;
 	       		loseFunction(loseScore);
-	           return "scissors wins";
+	           
 	       }
 	   }
 	   else if (userGuess === "s") {
 	       if (computerGuess === "p") {
 	       		winScore++;
 	       		winFunction(winScore);
-	           return "scissors wins";
+	          
 	       }
 	       else {
 	       		loseScore++;
 	       		loseFunction(loseScore);
-	           return "rock wins";
+	       
 	       }
 	   }
 	}
