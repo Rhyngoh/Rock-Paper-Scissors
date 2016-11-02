@@ -57,14 +57,10 @@ document.onkeyup = function(event) {
 	// Determines which exact key was selected. Make it lowercase
 	var userGuess = String.fromCharCode(event.keyCode).toLowerCase();
 	console.log(userGuess);
-	// Alerts with user guess
-	//alert(userGuess);
 
 	// Create code to randomly choose one of the three options (Computer) 
 	var computerGuess = options[Math.floor(Math.random()*options.length)];
 	console.log(computerGuess);
-	// Alerts with Computer guess
-	//alert(computerGuess);
 
 	console.log("computerGuess");
 	//console.log("Computer computerChoice);
@@ -72,43 +68,35 @@ document.onkeyup = function(event) {
 	   if (userGuess === computerGuess) {
 	   		tieScore++;
 	   		tieFunction(tieScore);
-	       
-
 	   }
 	   else if (userGuess === "r") {
 	       if (computerGuess === "s") {
 	       		winScore++;
 	       		winFunction(winScore);
-	           
 	       }
 	       else {
 	       		loseScore++;
-	       		loseFunction(loseScore);
-	           
+	       		loseFunction(loseScore);  
 	       }
 	   }     
 	   else if (userGuess === "p") {
 	       if (computerGuess === "r") {
 	       	winScore++;
 	       	winFunction(winScore);
-	      
 	       }
 	       else {
 	       		loseScore++;
 	       		loseFunction(loseScore);
-	           
 	       }
 	   }
 	   else if (userGuess === "s") {
 	       if (computerGuess === "p") {
 	       		winScore++;
 	       		winFunction(winScore);
-	          
 	       }
 	       else {
 	       		loseScore++;
 	       		loseFunction(loseScore);
-	       
 	       }
 	   }
 	}
@@ -116,6 +104,7 @@ compare(userGuess,computerGuess);
 console.log(userGuess,computerGuess);
 console.log(winScore,loseScore,tieScore);
 };
+//reset function
 function resetScore() {
 	tieScore = 0;
 	winScore = 0;
@@ -128,21 +117,3 @@ function resetScore() {
 </script>
 </body>
 </html>
-<!--
-Set User and Computer score to 0
-
-Take keyboard input of "R" "P" "S"
-
-Make a random letter generator/ number generator for computer input
-var computerInput = Math.floor((Math.random() * 3));
-var computerRPS = ["Rock", "Paper", "Scissors"];
-var x = computerRPS[computerInput]
-If user chose "R" and computer chose "S", user wins and score +1
-
-If user chose "R" and computer chose "R", user ties and score +0
-
-If user chose "R" and computer chose "P", user loses and score -1
-
-The user presses R P S to play again.
-
-On reset button click, reset user and computer score to 0 -->
