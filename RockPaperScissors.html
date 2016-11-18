@@ -32,7 +32,7 @@
 	</div>
 
 <script type="text/javascript">
-
+// Three scores for how many times user has won/lost/tied
 var winScore = 0;
 var loseScore = 0;
 var tieScore = 0;
@@ -60,10 +60,7 @@ document.onkeyup = function(event) {
 
 	// Create code to randomly choose one of the three options (Computer) 
 	var computerGuess = options[Math.floor(Math.random()*options.length)];
-	console.log(computerGuess);
 
-	console.log("computerGuess");
-	//console.log("Computer computerChoice);
 	var compare = function(userGuess,computerGuess) {
 	   if (userGuess === computerGuess) {
 	   		tieScore++;
@@ -100,9 +97,6 @@ document.onkeyup = function(event) {
 	       }
 	   }
 	}
-compare(userGuess,computerGuess);
-console.log(userGuess,computerGuess);
-console.log(winScore,loseScore,tieScore);
 };
 //reset function
 function resetScore() {
