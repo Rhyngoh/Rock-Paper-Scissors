@@ -5,15 +5,10 @@
 	<title>Rock Paper Scissors Game</title>
 	<!-- Bootstrap -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-	<!-- Theme 
-	<link rel="stylesheet" href="startbootstrap-creative-gh-pages/css/creative.css"> -->
-
 	<!-- Fonts -->
 	<link href="https://fonts.googleapis.com/css?family=Merriweather|Open+Sans" rel="stylesheet">
-
     <!-- Style -->
 	<link rel="stylesheet" href="assets/css/style.css">
-
 	<!-- Viewport -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
@@ -61,6 +56,7 @@ document.onkeyup = function(event) {
 	// Create code to randomly choose one of the three options (Computer) 
 	var computerGuess = options[Math.floor(Math.random()*options.length)];
 
+	//Compare the key input to the computer guess
 	var compare = function(userGuess,computerGuess) {
 	   if (userGuess === computerGuess) {
 	   		tieScore++;
