@@ -38,12 +38,15 @@ var options = ["r","p","s"];
 // Query Selector for win, tie, lose
 function winFunction(winScore) {
 	document.querySelector("#playerWin").innerHTML = "Win Score : " + winScore;
+	console.log("win score" + winScore);
 }
 function tieFunction(tieScore) {
 	document.querySelector("#playerTie").innerHTML = "Tie Score : " + tieScore;
+	console.log("tie score" + tieScore);
 }
 function loseFunction(loseScore) {
 	document.querySelector("#playerLose").innerHTML = "Lose Score : " + loseScore;
+	console.log("lose score" + loseScore);
 }
 
 // Captures Key Clicks
@@ -55,22 +58,20 @@ document.onkeyup = function(event) {
 
 	// Create code to randomly choose one of the three options (Computer) 
 	var computerGuess = options[Math.floor(Math.random()*options.length)];
-
+	console.log(computerGuess)
 	//Compare the key input to the computer guess
 	var compare = function(userGuess,computerGuess) {
-	   //If user guess is the same as computer guess, tie
 	   if (userGuess === computerGuess) {
+	   	console.log("it tied");
 	   		tieScore++;
 	   		tieFunction(tieScore);
 	   }
-	   //else if user is rock and computer is scissors, user wins
-	   else if (userGuess === "r") {
+	   else if (userGuess === "r") { 
 	       if (computerGuess === "s") {
 	       		winScore++;
 	       		winFunction(winScore);
 	       }
-	       //else user loses
-	       else {
+	       else { 
 	       		loseScore++;
 	       		loseFunction(loseScore);  
 	       }
