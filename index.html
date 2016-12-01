@@ -60,7 +60,6 @@ document.onkeyup = function(event) {
 	var computerGuess = options[Math.floor(Math.random()*options.length)];
 	console.log(computerGuess)
 	//Compare the key input to the computer guess
-	var compare = function(userGuess,computerGuess) {
 	   if (userGuess === computerGuess) {
 	   	console.log("it tied");
 	   		tieScore++;
@@ -96,7 +95,6 @@ document.onkeyup = function(event) {
 	       		loseFunction(loseScore);
 	       }
 	   }
-	}
 };
 //reset function
 function resetScore() {
