@@ -58,15 +58,18 @@ document.onkeyup = function(event) {
 
 	//Compare the key input to the computer guess
 	var compare = function(userGuess,computerGuess) {
+	   //If user guess is the same as computer guess, tie
 	   if (userGuess === computerGuess) {
 	   		tieScore++;
 	   		tieFunction(tieScore);
 	   }
+	   //else if user is rock and computer is scissors, user wins
 	   else if (userGuess === "r") {
 	       if (computerGuess === "s") {
 	       		winScore++;
 	       		winFunction(winScore);
 	       }
+	       //else user loses
 	       else {
 	       		loseScore++;
 	       		loseFunction(loseScore);  
