@@ -1,1 +1,1 @@
-<?php include_once("RockPaperScissors.html"); ?>
+<?php include_once("index.html"); ?>
